@@ -1,16 +1,16 @@
 import React, {useState} from 'react'
 
 const Display = (props) => {
-    const newBox = props
+    const boxArray = props
     return(
         <div>
             {
-                props.box.map((color, index) =>
+                props.boxArray.map((box, index) =>
                 <div key={index} style={{
                     display: "inline-block",
-                    height: "50px",
-                    width:"50px",
-                    backgroundColor: color,
+                    height: `${box.size}px`,
+                    width:`${box.size}px`,
+                    backgroundColor: box.color,
                     margin:"5px"
                 }}></div>
                 )

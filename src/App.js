@@ -7,15 +7,14 @@ import Display from './components/Display'
 function App() {
   const [newBox, setNewBox] = useState([])
 
-  const newBoxRequest = (color)=> {
-    setNewBox(arr => [...arr, color])
-    console.log(newBox)
+  const newBoxRequest = (box)=> {
+    setNewBox(arr => [...arr, box])
   }
 
   return (
     <div className="App">
       <Form onNewBox = {newBoxRequest}/>
-      <Display box={newBox}/>
+      <Display boxArray={newBox}/>
     </div>
   );
 }
